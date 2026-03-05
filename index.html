@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 2. <head> section: Metadata and External Fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - THARUSHA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Improvement: Modern 'Inter' font for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- 3. CSS styling section -->
+    <style>
+        :root {
+            /* Improvement: Vibrant gradient colors */
+            --primary: #4f46e5;
+            --secondary: #9333ea;
+            --accent: #06b6d4;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Improvement: Deep gradient background */
+            background: var(--bg-gradient);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* 1. <div> structure: Main Container */
+        .profile-card {
+            width: 90%;
+            max-width: 500px;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            
+            /* Improvement: Pronounced Rounded Corners */
+            border-radius: 32px;
+            
+            /* Improvement: Complex Shadow for depth */
+            box-shadow: 
+                0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1px var(--glass-border);
+            
+            padding: 48px 32px;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .profile-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .avatar-placeholder {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 24px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            /* Improvement: Rounded corners for avatar */
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .avatar-placeholder svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+            opacity: 0.9;
+        }
+
+        .name-heading {
+            /* Improvement: Modern bold typography */
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 4px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stream-tag {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 32px;
+            display: inline-block;
+        }
+
+        .bio-box {
+            background: rgba(0, 0, 0, 0.2);
+            /* Improvement: Rounded corners for sub-sections */
+            border-radius: 20px;
+            padding: 20px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bio-label {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 0.05em;
+        }
+
+        .bio-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. <div> structure: Functional sections -->
+    <div class="profile-card">
+        <div class="avatar-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        </div>
+
+        <h1 class="name-heading">THARUSHA</h1>
+        <span class="stream-tag">Computer Science</span>
+
+        <div class="bio-box">
+            <span class="bio-label">About Me</span>
+            <p class="bio-text">
+                Computer Science student focused on developing elegant solutions to complex problems. 
+                Passionate about software architecture, clean code, and emerging technologies.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
